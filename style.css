@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+}
+body{
+    background-color: var(--LightGray);
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+.container{
+    border-radius: 5px;
+    height: 722px;
+    width: 311px;
+    margin: 72px auto;
+    overflow: hidden;
+}
+.container__top{
+    background-color: white;
+    height: 267px;
+    padding: 28px 24px 35px 24px;
+}
+.first{
+    color: var(--Cyan);
+    font-weight: 700;
+    font-size: 1.2em;
+}
+.second{
+    color: var(--BrightYellow);
+    font-weight: 700;
+    font-size: 0.9em;
+    line-height: 19px;
+    margin-top: 24px;
+}
+.third{
+    color: var(--GrayishBlue);
+    font-weight: 400;
+    font-size: 0.85em;
+    line-height: 26px;
+    margin-top: 17px;
+}
+.container__subscription{
+    background-color: var(--Cyan);
+    height: 228px;
+    padding: 25px 24px 24px 24px;
+}
+.title{
+    color: white;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+.price{
+    color:white;
+    font-weight: 700;
+    font-size: 1.9em;
+    margin-top: 18px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+.price span{
+    color: var(--LightGray);
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 55%;
+}
+.subscription-info{
+    color: var(--LightGray);
+    font-weight: 400;
+    font-size: 0.98em;
+    margin-top: 8px;
+}
+.signUp{
+    background-color: var(--BrightYellow);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    margin: 29px auto;
+    width: 263px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 9px 15px hsl(0, 0%, 0%, 13%);
+}
+.signUp:hover{
+    opacity: 85%;
+}
+.container__whyUs{
+    background-color: hsl(179, 62%, 43%, 80%);
+    height: 227px;
+    padding: 24px 24px 24px 24px;
+}
+.whyUs-info{
+    color: var(--LightGray);
+    font-weight: 400;
+    font-size: 0.87em;
+    margin-top: 18px;
+    line-height: 20.3px;
+    opacity: 90%;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+@media (min-width:635px){
+    .container{
+        border-radius: 9px;
+        height: 475px;
+        width: 635px;
+        margin: 163px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        'join join'
+        'subs why';
+        box-shadow: 1px 10px 15px hsl(0, 0%, 0%, 13%);
+    }
+    .container__top{
+        grid-area: join;
+        height: 216px;
+        padding: 40px 39px;
+    }
+    .container__subscription{
+        grid-area: subs;
+        height: 259px;
+        padding: 40px 39px;
+    }
+    .container__whyUs{
+        grid-area: why;
+        height: 259px;
+        padding: 40px 39px;
+    }
+    .first{
+        font-size: 1.5rem;
+    }
+    .second{
+        font-size: 1.12rem;
+    }
+    .third{
+        font-size: 1rem;
+        margin-top: 12px;
+    }
+    .subscription-info{
+        margin-top: 10px;
+    }
+    .signUp{
+        width: 238px;
+        margin: 30px auto;
+    }
+}
